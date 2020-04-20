@@ -1,5 +1,5 @@
 {
-  "homepage": "https://michaelarnoldowens.github.io/home",
+  "homepage": "https://michaelarnoldowens.github.io",
   "name": "home",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
