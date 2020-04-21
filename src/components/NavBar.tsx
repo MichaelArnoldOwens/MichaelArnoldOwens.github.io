@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-export default class NavBar extends Component {
-  render() {
-    return (
-      <Navbar bg="light" expand="lg">
+const NavBar = () => {
+  return (
+    <Navbar bg="light" expand="lg">
         <Navbar.Brand>
           <Link to="/">Michael Owens</Link>
         </Navbar.Brand>
-        <Nav.Link href="/" ><Link to="/">Home</Link></Nav.Link>
-        <Nav.Link href="#about" ><Link to="/about">About</Link></Nav.Link>
-        <Nav.Link href="#todo" ><Link to="/about">TODO</Link></Nav.Link>
+        <Link className="nav-link" to="/">Home</Link>
+        <Link className="nav-link" to="/about">About</Link>
+        <Link className="nav-link" to="/todo">Todo</Link>
       </Navbar>
-    );
-  }
+  );
 }
+
+export default NavBar;
