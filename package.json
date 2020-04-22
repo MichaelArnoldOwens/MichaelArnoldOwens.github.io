@@ -21,13 +21,21 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -b master -d build",
+    "lint": "./node_modules/prettier/bin-prettier.js src"
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -44,6 +52,8 @@
   "devDependencies": {
     "@types/react-router-bootstrap": "^0.24.5",
     "@types/react-router-dom": "^5.1.4",
-    "gh-pages": "^2.2.0"
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "gh-pages": "^2.2.0",
+    "prettier": "^2.0.5"
   }
 }
