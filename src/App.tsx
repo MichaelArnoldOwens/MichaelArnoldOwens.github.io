@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavBar from 'components/NavBar';
+import Todo from 'components/Todo/Todo';
 import { HashRouter, Route } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
-  render() {
-    return (
-      <HashRouter basename="/">
-        <div>
-          <NavBar />
-          <Route exact path="/" component={UnderConstruction} />
-          <Route exact path="/about" component={UnderConstruction} />
-          <Route exact path="/todo" component={UnderConstruction} />
-        </div>
-      </HashRouter>
-    );
-  }
+const App = () => {
+  return (
+    <HashRouter basename="/">
+      <div>
+        <NavBar />
+        <Route exact path="/" component={UnderConstruction} />
+        <Route exact path="/about" component={UnderConstruction} />
+        <Route exact path="/todo" component={Todo} />
+      </div>
+    </HashRouter>
+  );
 }
 
-function UnderConstruction() {
+const UnderConstruction = () => {
   return (
     <div className="App">
       <header className="App-header">
