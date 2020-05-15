@@ -21,7 +21,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -b master -d build",
-    "lint": "./node_modules/prettier/bin-prettier.js src"
+    "lint": "./node_modules/prettier/bin-prettier.js src",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
